@@ -9,12 +9,13 @@
 :root {
     font-size: 62.5%;
 
-    --bg-color:#292738;
+    --bg-clr:#292738;
     --bg-box-color:#363447;
 }
 
 body {
     font-size: 1.6rem;
+    font-family: 'Inter';
 }
 
 .grid {
@@ -26,21 +27,88 @@ body {
     background: var(--bg-box-color);
     box-shadow: 0.3rem 0.4rem 2.6rem rgb(0, 0, 0, 0.25) ;
     border-radius: 1.6rem;
+
+    color: white;
 }
 .box:nth-child(4){
    grid-column: 1/4;
 }
 
+.nps {
+    gap: 3.2rem;
+}
+
+.top {
+    font-weight: 600;
+    font-size: 24px;
+    text-align: center;
+    
+}
+
+.bottom {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+
+    margin-top: auto;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+/* ITEM BOX FOOTER  */
+
+.bottom .item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.bottom .item span:nth-child(1){
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.bottom .item span {
+    --bg-color: #4a4556;
+}
+
+.bottom .item span:nth-child(1)::before{
+    content: '';
+    width: 1.5rem;
+    height: 1.5rem;
+    display: block;
+    background: var(--bg-color);
+    border-radius: 999px    ;
+}
+
+
+.nps .middle {
+    height: 19.7rem;
+    place-content: center;
+    justify-items: center;
+    gap: 1.6rem;
+
+    color: #81FBB8;
+}
+
+.nps .bottom {
+    gap: 1rem;
+}
+
 
 #app {
-    background: var(--bg-color);
+    background: var(--bg-clr);
 
-    grid-template-columns: max-content max-content max-content;
-
-    width: 100vw;
-    height: 100vh;
-
-    padding: 11.2rem 12.3rem;
+    grid-template-columns: 29.6rem max-content max-content;
+    grid-template-rows: max-content;
     column-gap: 3.2rem;
     row-gap: 5.9rem;
+
+    width: fit-content;
+    height: fit-content;
+
+    min-width: 100vw;
+    min-height: 100vh;
+
+    place-content:  center;
 }
