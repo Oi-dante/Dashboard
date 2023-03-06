@@ -56,7 +56,6 @@ body {
 }
 
 /* ITEM BOX FOOTER  */
-
 .bottom .item {
     display: flex;
     align-items: center;
@@ -111,4 +110,15 @@ body {
     min-height: 100vh;
 
     place-content:  center;
+}
+
+/* SVG DONUT */
+.middle {
+    display: grid;
+    place-content: center;
+}
+
+svg {
+    width: 19.7rem;
+    height: 19.7rem;
 }
