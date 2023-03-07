@@ -112,13 +112,58 @@ body {
     place-content:  center;
 }
 
-/* SVG DONUT */
+/* MIDDLE POSITION */
 .middle {
     display: grid;
     place-content: center;
+    position: relative;
 }
 
+.middle .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.content h3 {
+    font-size: 3.4rem;
+}
+
+/* SVG DONUT */
 svg {
+    --circumference: 618;
+    --percentage: 0;
     width: 19.7rem;
     height: 19.7rem;
+    transform: rotate(-90deg);
+}
+
+
+svg circle {
+    stroke-dasharray: var(--circumference);
+    stroke-dashoffset: var(--circumference);
+    stroke-width: 35;
+    fill: none;
+}
+
+svg circle:nth-child(1) {
+    stroke-dashoffset: 0;
+}
+
+svg circle:nth-child(2) {
+    stroke-dashoffset: calc(var(--circumference) - (var(--circumference) * var(--percentage))/100);
+    stroke-linecap: round;
+
+    animation: progress 1.8s ease-in-out backwards;
+    animation-delay: 0.2s;
+}
+
+
+/* ANIMATION */
+@keyframes progress {
+    0% {
+        stroke-dasharray: 618;
+        stroke-dashoffset: 618;
+    }
 }

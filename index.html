@@ -15,7 +15,7 @@
 </head>
 <body>
     <main id="app" class="grid">
-        
+        <!-- BOX 1 -->
         <div class="box nps grid">
             <div class="top">NPS geral</div>
             <div class="middle grid">
@@ -27,35 +27,44 @@
                 <span>75</span>
             </div>
         </div>
-
-        <div class="box sell grid">
+        
+        <!-- BOX 2 -->
+        <div class="box sell grid" style="--percentage:70">
             <div class="top">Closed Sales</div>
             <div class="middle">
-            <svg viewBox="0 0 232 232">
-                <circle
-                    cx="50%" cy="50%"
+                <svg viewBox="0 0 232 232"
+                style="--percentage: 70">
+                    <circle
+                        cx="50%" cy="50%"
+                        r="98.5"
+                        opacity="0.1"
+                        stroke="#D9D9D9"
+                    />
+                    <circle
+                    cx="50%"
+                    cy="50%"
                     r="98.5"
-                    opacity="0.1"
-                    stroke="#D9D9D9"
-                />
-                <circle
-                cx="50%"
-                cy="50%"
-                r="98.5"
-                stroke="url(#paint0_linear_201_85)"
-                />
-                <defs>
-                <linearGradient 
-                id="paint0_linear_201_85" x1="-9"
-                y1="82" x2="145" y2="178"
-                gradientUnits="userSpaceOnUse">
-
-                <stop stop-color="#CE9FFC"/>
-                <stop offset="1"
-                stop-color="#7367F0"/>
-                </linearGradient>
-                </defs>
-            </svg>
+                    stroke="url(#paint0_linear_201_85)"
+                    />
+                    <defs>
+                    <linearGradient 
+                        id="paint0_linear_201_85" 
+                        x1="-9"
+                        y1="82"
+                        x2="145" 
+                        y2="178"
+                        gradientUnits="userSpaceOnUse"
+                    >
+                        <stop stop-color="#CE9FFC"/>
+                        <stop offset="1"
+                        stop-color="#7367F0"/>
+                    </linearGradient>
+                    </defs>
+                </svg>
+                <div class="content">
+                    <h3>70%</h3>
+                    <p>Achieved</p>
+                </div>
 
             </div>
             <div class="bottom">
@@ -70,9 +79,44 @@
             </div>
         </div>
 
+        <!-- BOX 3 -->
         <div class="box target grid">
             <div class="top">Monthly Goal</div>
-            <div class="middle"></div>
+            <div class="middle">
+                <svg viewBox="0 0 232 232"
+                style="--percentage:90">
+                    <circle
+                        cx="50%" cy="50%"
+                        r="98.5"
+                        opacity="0.1"
+                        stroke="#D9D9D9"
+                    />
+                    <circle
+                    cx="50%"
+                    cy="50%"
+                    r="98.5"
+                    stroke="url(#paint0_linear_201_104)"
+                    />
+                    <defs>
+                    <linearGradient 
+                        id="paint0_linear_201_104" 
+                        x1="0.5"
+                        y1="82" 
+                        x2="154.842"
+                        y2="178.702"
+                        gradientUnits="userSpaceOnUse"
+                    >
+                        <stop stop-color="#A66DE9"/>
+                        <stop offset="1" stop-color="#DF9780"/>
+                    </linearGradient>
+                    </defs>
+                </svg>
+                <div class="content">
+                    <h3>90%</h3>
+                    <p>Achieved</p>
+                </div>
+            </div>
+
             <div class="bottom">
                 <div class="item">
                     <span>Expected</span>
@@ -83,9 +127,13 @@
                     <span>R$ 63k</span>
                 </div>
             </div>
+        </div>
+
+        <!-- BOTTOM BOX -->
+        <div class="box">
             
         </div>
-        <!-- <div class="box"></div> -->
+
     </main>
     
 </body>
